@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block content%}
+    <h3>Bases on {{server.title}} </h3>
+<ul>
+    {% for base in bases %}
+    <!--<li><a href="{{ base.get_absolute_url }}">{{ base.title }}</a></li>-->
+    {% endfor %}
+
+    {% for b in bases2 %}
+        <p> {{ b.0 }} {{ b.1 }}
+    {% endfor %}
+</ul>
+{% endblock%}

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        {% load bootstrap4 %}
+        {% bootstrap_css %}
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'css/main.css' %}">
+    </head>
+    <body>
+        <table><tr><td>
+        <h3>Servers</h3>
+
+<ul>
+    {% for server in servers %}
+        <li><strong><a href="{{ server.get_absolute_url }}"> {{ server.title }}</a></strong></li>
+    {% endfor %}
+</ul>
+<td>
+{% block content%}{% endblock %}
+    </body>
+</html>
